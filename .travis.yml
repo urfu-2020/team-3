@@ -14,3 +14,7 @@ deploy:
   - provider: surge
     project: ./server/public/
     domain: kilogram-team3.surge.sh
+  - provider: heroku
+    app: kilogram-team3
+    api_key:
+      secure: HEROKU_KEY
