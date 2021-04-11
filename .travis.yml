@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - 14
+install:
+  - npm install
+before_script:
+  - npm run lint
+
+branches:
+  only:
+    - master
+
+deploy:
+  - provider: surge
+    project: ./server/public/
+    domain: kilogram-team3.surge.sh
+  - provider: heroku
+    app: kilogram-team3
+    api_key:
+      secure: 9b8c4dd1-fbe5-4ba7-911f-f9bc1c56c6de
