@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - 14
+install:
+  - npm install
+before_script:
+  - npm run lint
+
+branches:
+  only:
+    - master
+
+deploy:
+  - provider: surge
+    project: ./server/public/
+    domain: kilogram-team3.surge.sh
