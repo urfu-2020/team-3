@@ -14,12 +14,14 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
     "stylelint": "^13.12.0",
-    "stylelint-config-standard": "^21.0.0"
+    "stylelint-config-standard": "^21.0.0",
+    "surge": "^0.23.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "deploy": "heroku container:push web -a kilogram-team3 && heroku container:release web -a kilogram-team3",
+    "deploy:surge": "surge -p ./public -d kilogram-team3.surge.sh",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:css": "npx stylelint \"**/*.css\" || exit 0",
     "lint:js": "eslint .  --ext .js --ignore-pattern \"node_modules\" || exit 0"
