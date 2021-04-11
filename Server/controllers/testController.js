@@ -3,5 +3,5 @@ exports.error404 = (req, res) => {
 };
 
 exports.testRoute = (req, res) => {
-    res.send("<b><i>Test</i></b> route")
+    res.send("<b><i>Test</i></b> route<br>Hi Heroku")
 }
