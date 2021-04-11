@@ -5,9 +5,6 @@ install:
   - npm install
 before_script:
   - npm run lint
-branches:
-  only:
-    - master
 deploy:
   - provider: surge
     project: ./server/public/
