@@ -14,3 +14,7 @@ deploy:
   - provider: surge
     project: ./server/public/
     domain: kilogram-team3.surge.sh
+  - provider: heroku
+    app: kilogram-team3
+    api_key:
+      secure: f1AmO3zp6XgakMsJK6AskKAXG7kZW+Zod6Hh1zHgkutqkoKtnHM7zPEM0Stxm/3nwua+LcB0Ot6IcPIeJF9OnpPHgWH/KBM6cVyTnIPSay14MDKuyBEV4XudAjMEMhQm89ZnwdE3nd/XXRaYd3c2vOEhv7bk7/ZQDb5gn3Oz7nd83EmAHe7T1nyNzVWhZfrJ5yivuM/s/HN4PqGX7jFyKh8zsr5gyy39uu2oYNrFcmKrM0ySb4TV+80FQP6+RMhBhjoeB34/KKcyFeW318qO7vknVSF/YXV2mCRGdOvHtbtmTqIyroyq+PlpUgkxsm1ha9hxJ29zUNpo/re/liVCa3gJyx/yHdFOq7rmqYx0XZy3px9JJiBW4sZ6/I8MWUc18i7/dugHZLw5CVnnDpTxmz+VG8new4R1lGU4H1b4EoU6ZGJeqJx/LcdcQUgHoQ44Ap1zFv/ZLDQGG7HsuHTSuul3rwUngGLNuIPw2EU5y/QiAJROKe4sZ+IBrPLVvdivdb47ClsnBxOzZgmrE3a7PZnDRuf3ebAQqmVTs6xQ3CyG9vx9ehSYj/QBmWL1p510x2nWT9vHKFZNzUJhAk+rUnhN3ysLQ0EkSG0VfveuJFBWT9+TvjfOLkjGkVr1V+Mjk158u0c7wkC/mgXKury66fOUvifqM1GvHGQuILsN0Rs=
