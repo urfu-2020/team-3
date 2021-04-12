@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "Server/index.js",
   "dependencies": {
     "express": "^4.17.1",
     "package.json": "^2.0.1"
@@ -19,12 +19,12 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
+    "start": "node Server/index.js",
     "deploy": "heroku container:push web -a kilogram-team3 && heroku container:release web -a kilogram-team3",
-    "deploy:surge": "surge -p ./public -d kilogram-team3.surge.sh",
+    "deploy:surge": "surge -p Server/public -d kilogram-team3.surge.sh",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:css": "npx stylelint \"**/*.css\" || exit 0",
-    "lint:js": "eslint .  --ext .js --ignore-pattern \"node_modules\" || exit 0"
+    "lint:js": "eslint Server || exit 0"
   },
   "author": "",
   "license": "ISC"

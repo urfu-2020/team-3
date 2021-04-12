@@ -1,11 +1,11 @@
 FROM node:10
 
-COPY controllers /controllers
+COPY Server/controllers /controllers
 COPY models /models
 COPY package-lock.json /
 COPY package.json /
-COPY index.js /
-COPY routes.js /
+COPY Server/index.js /
+COPY Server/routes.js /
 
 RUN npm ci
 
