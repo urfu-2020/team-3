@@ -18,7 +18,6 @@
     "surge": "^0.23.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\"|| exit 0",
     "start": "node Server/index.js",
     "deploy": "heroku container:push web -a kilogram-team3 && heroku container:release web -a kilogram-team3",
     "deploy:surge": "surge -p Server/public -d kilogram-team3.surge.sh",
