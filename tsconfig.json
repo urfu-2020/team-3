@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es6", // or a more recent ecmascript version
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": ["node_modules", "dist"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+}
