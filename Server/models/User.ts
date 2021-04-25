@@ -1,13 +1,12 @@
-import {AutoIncrement, BelongsToMany, Column, DataType, Model, PrimaryKey, Table} from 'sequelize-typescript';
-import Chat from "./Chat";
-import ChatUser from "./ChatUser";
+import { AutoIncrement, BelongsToMany, Column, DataType, Model, PrimaryKey, Table } from 'sequelize-typescript'
+import Chat from './Chat'
+import ChatUser from './ChatUser'
 
 @Table({
-    timestamps: false,
-    tableName: 'Users'
+  timestamps: false,
+  tableName: 'Users'
 })
 class User extends Model {
-
     @AutoIncrement
     @PrimaryKey
     @Column(DataType.INTEGER)

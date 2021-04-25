@@ -1,23 +1,22 @@
 import {
-    AllowNull,
-    AutoIncrement,
-    BelongsTo,
-    Column,
-    DataType,
-    ForeignKey,
-    Model,
-    PrimaryKey,
-    Table
-} from 'sequelize-typescript';
-import Chat from "./Chat";
-import User from "./User";
+  AllowNull,
+  AutoIncrement,
+  BelongsTo,
+  Column,
+  DataType,
+  ForeignKey,
+  Model,
+  PrimaryKey,
+  Table
+} from 'sequelize-typescript'
+import Chat from './Chat'
+import User from './User'
 
 @Table({
-    timestamps: false,
-    tableName: 'Messages'
+  timestamps: false,
+  tableName: 'Messages'
 })
 class Message extends Model {
-
     @AutoIncrement
     @PrimaryKey
     @Column(DataType.INTEGER)
@@ -46,7 +45,6 @@ class Message extends Model {
     @AllowNull(true)
     @Column(DataType.INTEGER)
     messageRespondId: number;
-
 }
 
 export default Message
