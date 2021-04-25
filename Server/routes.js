@@ -1,6 +1,8 @@
-const {error404, testRoute} = require('./controllers/testController')
+const { error404, testRoute } = require('./controllers/testController')
+const express = require('express')
+const app = express()
 
-module.exports = app => {
-    app.get('/', testRoute);
-    app.all('*', error404)
-};
+app.get('/', testRoute)
+app.all('*', error404)
+
+module.exports = app
