@@ -1,6 +1,6 @@
 import apiRouter from './apiRouter'
 const { error404, baseRoute } = require('./controllers/testController')
-const express = require('express')
+import express from 'express'
 const expressApp = express()
 
 expressApp.use('/api', apiRouter)
