@@ -1,5 +1,5 @@
 import userController from './controllers/userController'
-import express = require('express');
+import express from 'express'
 
 const apiRouter = express.Router()
 
