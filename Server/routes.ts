@@ -58,7 +58,7 @@ expressApp.use('/api', connectEnsureLogin.ensureLoggedIn('/er'), apiRouter)
 expressApp.get(
   '/profile',
   connectEnsureLogin.ensureLoggedIn('/er'),
-  (req, res) => res.send('Привет ' + req.user[0].userName)
+  (req, res) => res.send('Привет ' + req['user'][0]['userName'])
 )
 expressApp.get(
   '/logout',
