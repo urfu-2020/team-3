@@ -3,6 +3,7 @@ import Chat from '../models/Chat'
 import Message from '../models/Message'
 import User from '../models/User'
 import ChatUser from '../models/ChatUser'
+import Session from "../models/Session";
 
 function initDatabase () {
   const sequelizeOptions: SequelizeOptions = {
@@ -17,7 +18,7 @@ function initDatabase () {
     dialect: 'postgres'
   }
   const sequelize = new Sequelize(sequelizeOptions)
-  sequelize.addModels([Chat, Message, User, ChatUser])
+  sequelize.addModels([Chat, Message, User, ChatUser, Session])
 }
 
 export default initDatabase
