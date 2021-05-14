@@ -7,6 +7,7 @@ import connectEnsureLogin from 'connect-ensure-login'
 import passport from 'passport'
 import passportGithub from 'passport-github'
 import expressSession from 'express-session'
+
 const expressApp = express()
 const strategy = new passportGithub.Strategy(
   {
