@@ -1,5 +1,5 @@
 import apiRouter from './apiRouter'
-import express from 'express'
+import express, { Request } from 'express'
 import { error404, baseRoute } from './controllers/testController'
 import User from './models/User'
 import cookieParser from 'cookie-parser'
@@ -58,7 +58,7 @@ expressApp.use('/api', connectEnsureLogin.ensureLoggedIn('/er'), apiRouter)
 expressApp.get(
   '/profile',
   connectEnsureLogin.ensureLoggedIn('/er'),
-  (req, res) => res.send('Привет ' + req['user'][0]['userName'])
+  (req: Request, res) => res.send('Привет ' + req.user[0].userName)
 )
 expressApp.get(
   '/logout',
