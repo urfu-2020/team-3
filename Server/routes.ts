@@ -69,7 +69,7 @@ expressApp.get(
     res.redirect('/')
   }
 )
-expressApp.get('/', connectEnsureLogin.ensureLoggedIn('/er'), baseRoute)
+expressApp.get('/', baseRoute)
 expressApp.get('/er', (req, res) => res.send('Выполните вход в систему через  <a href="login">GitHub</a>'))
 expressApp.all('*', error404)
 
