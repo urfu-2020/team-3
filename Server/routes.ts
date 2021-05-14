@@ -26,6 +26,7 @@ const strategy = new passportGithub.Strategy(
     done(null, user)
   }
 )
+
 passport.use(strategy)
 expressApp.use(cookieParser())
 expressApp.use(expressSession({
