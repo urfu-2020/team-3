@@ -1,6 +1,6 @@
 FROM node:10
 
-COPY Server /server
+COPY Server /Server
 COPY package-lock.json /
 COPY package.json /
 
