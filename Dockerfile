@@ -1,5 +1,6 @@
 FROM node:10
 
+COPY @types /@types
 COPY Server /Server
 COPY package-lock.json /
 COPY package.json /
