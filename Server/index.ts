@@ -1,10 +1,7 @@
-import app from './routes'
+import app from './app'
 import initDatabase from './database/database'
-import bodyParser from 'body-parser'
 
 const port = process.env.PORT || 80
-
-app.use(bodyParser.json())
 
 async function main () {
   await initDatabase()
