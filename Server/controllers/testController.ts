@@ -3,5 +3,5 @@ export const error404 = (req, res) => {
 }
 
 export const baseRoute = (req, res) => {
-  res.send('<b><i>Test</i></b> route<br>Hi Heroku')
+  res.send('<b><i>Test</i></b> route<br>Hi Heroku<br>Выполните вход в систему через  <a href="login">GitHub</a>')
 }
