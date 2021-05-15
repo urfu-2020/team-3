@@ -1,5 +1,5 @@
 const request = require('supertest')
-import expressApp from "../Server/routes";
+import expressApp from "../Server/app";
 
 describe('GET /ping', function() {
     it('responds code 404', function(done) {
@@ -15,7 +15,7 @@ describe('GET /', function() {
         request(expressApp)
         .get('/')
         .expect(200)
-        .expect("<b><i>Test</i></b> route<br>Hi Heroku")
+        .expect('<b><i>Test</i></b> route<br>Hi Heroku<br>Выполните вход в систему через  <a href="login">GitHub</a>')
         .end(done)
     })
   })
