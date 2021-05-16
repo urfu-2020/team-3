@@ -10,12 +10,9 @@ import expressSession from 'express-session'
 const expressApp = express()
 const strategy = new passportGithub.Strategy(
   {
-    /* clientID: process.env.GITHUB_CLIENT_ID,
+    clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: process.env.GITHUB_CALLBACK_URL */
-    clientID: '16351fcfac8e2b477cea',
-    clientSecret: '5280e93b3532ef12b90192cbe8a3137550a16376',
-    callbackURL: 'http://localhost:80/login/return'
+    callbackURL: process.env.GITHUB_CALLBACK_URL
   },
   async (accessToken, refreshToken, profile, done) => {
     const user = await User.findOrCreate({
@@ -32,8 +29,7 @@ passport.use(strategy)
 expressApp.use(cookieParser())
 expressApp.use(bodyParser.json())
 expressApp.use(expressSession({
-  // secret: process.env.SECRET_SESSION,
-  secret: 'f9u402bvcyafа4a2j8vuv',
+  secret: process.env.SECRET_SESSION
   resave: false,
   saveUninitialized: false
 }))
