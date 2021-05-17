@@ -43,18 +43,18 @@ chatController.post('/', async (req, res) => {
     if (req.body.users.length===2){
       let intersection = await Promise.all([ChatUser.findAll({
         where: {
-          userIdInChat: req.body.users[0].userId }
+          userIdInChat: req.body.users[0]["userId"] }
       }), ChatUser.findAll({
         where: {
-          userIdInChat: req.body.users[1].userId }
-      })]).then(chats => chats.map(chat => chat.map(c => c.chatId)))
+          userIdInChat: req.body.users[1]["userId"] }
+      })]).then(chats => chats.map(chat => chat.map(c => c["chatId"])))
       .then(chats => chats[0].filter(id => chats[1].includes(id)))
       for (let i=0; i<intersection.length; i++){
         const chat = await Chat.findOne({
           where: {
             chatId: intersection[i] }
         })
-        if (chat.isPersonalChat === true){
+        if (chat["isPersonalChat"] === true){
           res.json(null)
           return
         }
@@ -68,11 +68,11 @@ chatController.post('/', async (req, res) => {
       for (const user in req.body.users){
         await ChatUser.findOrCreate({
           where: {
-            chatId: chat.chatId,
-            userIdInChat: req.body.users[user].userId },
+            chatId: chat["chatId"],
+            userIdInChat: req.body.users[user]["userId"] },
           defaults: {
-            chatId: chat.chatId,
-            userIdInChat: req.body.users[user].userId
+            chatId: chat["chatId"],
+            userIdInChat: req.body.users[user]["userId"]
           }
         })
       }
