@@ -29,7 +29,7 @@ passport.use(strategy)
 expressApp.use(cookieParser())
 expressApp.use(bodyParser.json())
 expressApp.use(expressSession({
-  secret: process.env.SECRET_SESSION
+  secret: process.env.SECRET_SESSION,
   resave: false,
   saveUninitialized: false
 }))
