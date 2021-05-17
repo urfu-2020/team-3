@@ -1,8 +1,5 @@
-import User from '../models/User'
 import Chat from '../models/Chat'
-import Message from '../models/Message'
 import ChatUser from '../models/ChatUser'
-import Session from "../models/Session";
 import express = require('express');
 
 const chatController = express.Router()
