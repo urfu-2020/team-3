@@ -6,7 +6,8 @@
     "module": "commonjs",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "typeRoots": ["./@types", "./node_modules/@types"]
+    "typeRoots": ["./@types", "./node_modules/@types"],
+    "jsx": "react"
   },
   "exclude": ["node_modules", "dist"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
