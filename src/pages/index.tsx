@@ -1,5 +1,5 @@
 function IndexPage () {
-  return <div>Hello World Next - Typescript - Express</div>
+  return <div> <b><i>Test</i></b> route Hi Heroku + nextjs </div>
 }
 
 export default IndexPage
