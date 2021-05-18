@@ -27,7 +27,7 @@ chatController.get('/', async (req, res) => {
   if (chats){
     let ressult = []
     for (const chat in chats){
-      ressult.push(chat["chatId"])
+      ressult.push(chats[chat]["chatId"])
     }
     res.json(ressult)
   }
