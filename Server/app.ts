@@ -1,4 +1,5 @@
 import routes from './routes'
+import cors from 'cors'
 import bodyParser from 'body-parser'
 import express from 'express'
 import User from './models/User'
@@ -8,6 +9,7 @@ import passportGithub from 'passport-github'
 import expressSession from 'express-session'
 
 const expressApp = express()
+expressApp.use(cors())
 const strategy = new passportGithub.Strategy(
   {
     clientID: process.env.GITHUB_CLIENT_ID,
