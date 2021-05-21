@@ -39,11 +39,11 @@
   padding: 5px;
 }
 
-.dialog_message-incoming {
+.dialog-message_incoming {
   flex-direction: row;
 }
 
-.dialog_message-incoming > .dialog-message__text {
+.dialog-message_incoming > .dialog-message__text {
   background-color: #e5e5e5;
   border-bottom-left-radius: 0;
 }

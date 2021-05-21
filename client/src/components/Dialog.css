@@ -1,0 +1,94 @@
+.dialog {
+    height: 100%;
+    max-height: 100%;
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
+    overflow: hidden;
+    border-left: #e5e5e5 1px solid;
+}
+
+.dialog-info {
+    height: 40px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    border-bottom: #e5e5e5 1px solid;
+}
+
+.dialog_default {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.dialog_default__content {
+    margin: auto;
+}
+
+.dialog-info__profile_picture {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.dialog__messages-wrapper {
+    height: calc(100% - 100px);
+    overflow: auto;
+}
+
+.dialog-message {
+    display: flex;
+}
+
+.dialog-message__text {
+    max-width: 50%;
+    margin: 5px;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.dialog-message_incoming {
+    flex-direction: row;
+}
+
+.dialog-message_incoming > .dialog-message__text {
+    background-color: #e5e5e5;
+    border-bottom-left-radius: 0;
+}
+
+.dialog-message_outgoing {
+    flex-direction: row-reverse;
+}
+
+.dialog-message_outgoing > .dialog-message__text {
+    background-color: #ffad9e;
+    border-bottom-right-radius: 0;
+}
+
+.message-form-wrapper {
+    height: 40px;
+    padding: 5px;
+    border-top: #e5e5e5 solid 1px;
+}
+
+.message-send-form {
+    display: grid;
+    grid-template-columns: 1fr 70px;
+}
+
+.message-input {
+    border: 0;
+    background: transparent;
+    border-bottom: 2px solid #ffad9e;
+}
+
+.message-send-button {
+    width: 70px;
+    height: 40px;
+    background-color: transparent;
+    border: #ffad9e 2px solid;
+    border-radius: 25px;
+    color: #ffad9e;
+}
